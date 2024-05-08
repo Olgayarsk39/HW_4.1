@@ -139,23 +139,12 @@ public class GeekBrainsStandTests {
     }
 
     @AfterEach
-    public void teardown() throws MalformedURLException{
+    public void teardown(){
         // Закрываем все окна брайзера и процесс драйвера
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setBrowserName("chrome");
-//        capabilities.setVersion("124");
-//        capabilities.setCapability("selenoid:options", new HashMap<String, Object>() {{
-//            put("enableVNC", true);
-//            put("enableVideo", true);
-//        }});
-//        RemoteWebDriver driver = new RemoteWebDriver(
-//                new URL("http://localhost:4444/wd/hub"), capabilities);
         if (driver != null){
             driver.quit();
             driver = null;
         }
-       // driver.quit();
     }
-
 }
 
